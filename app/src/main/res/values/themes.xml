@@ -1,1 +1,7 @@
-.
+<resources>
+    <style name="Theme.QuestionReformatter" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#1A237E</item>
+        <item name="colorPrimaryDark">#0D1257</item>
+        <item name="colorAccent">#3949AB</item>
+    </style>
+</resources>
