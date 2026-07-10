@@ -1,1 +1,103 @@
-.
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question Paper Reformatter"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paste the raw question paper text below, optionally attach a school logo, then generate a cleanly formatted PDF."
+            android:textSize="13sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnPickLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select School Logo (optional)" />
+
+        <ImageView
+            android:id="@+id/imgLogoPreview"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:contentDescription="Logo preview" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raw question paper text"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/editRawText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="14"
+            android:gravity="top|start"
+            android:background="#F2F2F2"
+            android:padding="10dp"
+            android:inputType="textMultiLine|textCapSentences"
+            android:hint="Paste the entire question paper text here exactly as you have it (heading, date/class/marks line, Part/Section headings, and all questions)." />
+
+        <Button
+            android:id="@+id/btnGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Generate Formatted PDF" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#444444" />
+
+        <LinearLayout
+            android:id="@+id/rowActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Open PDF" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Share PDF" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
